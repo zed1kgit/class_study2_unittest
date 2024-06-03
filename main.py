@@ -16,3 +16,7 @@ class Teacher:
     def set_experience(self, experience):
         self.__experience = experience
         return True
+
+    def get_teacher_data(self):
+        return f"{self.__name}, образование {self.__education}, опыт работы {self.__experience}"
+

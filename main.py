@@ -25,3 +25,6 @@ class Teacher:
 
     def remove_mark(self, name, mark):
         return f"{self.__name} удалил оценку {mark} студенту {name}"
+
+    def give_a_consultation(self, ed_class):
+        return f"{self.__name} провел консультацию в классе {ed_class}"

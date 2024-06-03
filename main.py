@@ -22,3 +22,6 @@ class Teacher:
 
     def add_mark(self, name, mark):
         return f"{self.__name} поставил оценку {mark} студенту {name}"
+
+    def remove_mark(self, name, mark):
+        return f"{self.__name} удалил оценку {mark} студенту {name}"

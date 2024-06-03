@@ -45,3 +45,19 @@ class DisciplineTeacher(Teacher):
     def set_job_title(self, job_title):
         self.__job_title = job_title
         return True
+
+    def get_teacher_data(self):
+        return (f"{self.__name}, образование {self.__education}, опыт работы {self.__experience}.\n"
+                f"Предмет {self.__discipline}, должность {self.__job_title}")
+
+    def add_mark(self, name, mark):
+        return (f"{self.__name} поставил оценку {mark} студенту {name}.\n"
+                f"Предмет {self.__discipline}")
+
+    def remove_mark(self, name, mark):
+        return (f"{self.__name} удалил оценку {mark} студенту {name}.\n"
+                f"Предмет {self.__discipline}")
+
+    def give_a_consultation(self, ed_class):
+        return (f"{self.__name} провел консультацию в классе {ed_class}.\n"
+                f"По предмету {self.__discipline} как {self.__job_title}")

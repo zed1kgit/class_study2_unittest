@@ -28,3 +28,10 @@ class Teacher:
 
     def give_a_consultation(self, ed_class):
         return f"{self.__name} провел консультацию в классе {ed_class}"
+
+
+class DisciplineTeacher(Teacher):
+    def __init__(self, name, education, experience, discipline, job_title):
+        super().__init__(name, education, experience)
+        self.__discipline = discipline
+        self.__job_title = job_title

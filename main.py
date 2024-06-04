@@ -47,17 +47,17 @@ class DisciplineTeacher(Teacher):
         return True
 
     def get_teacher_data(self):
-        return (f"{self.__name}, образование {self.__education}, опыт работы {self.__experience}.\n"
+        return (f"{super().get_name()}, образование {super().get_education()}, опыт работы {super().get_experience()}.\n"
                 f"Предмет {self.__discipline}, должность {self.__job_title}")
 
     def add_mark(self, name, mark):
-        return (f"{self.__name} поставил оценку {mark} студенту {name}.\n"
+        return (f"{super().get_name()} поставил оценку {mark} студенту {name}.\n"
                 f"Предмет {self.__discipline}")
 
     def remove_mark(self, name, mark):
-        return (f"{self.__name} удалил оценку {mark} студенту {name}.\n"
+        return (f"{super().get_name()} удалил оценку {mark} студенту {name}.\n"
                 f"Предмет {self.__discipline}")
 
     def give_a_consultation(self, ed_class):
-        return (f"{self.__name} провел консультацию в классе {ed_class}.\n"
+        return (f"{super().get_name()} провел консультацию в классе {ed_class}.\n"
                 f"По предмету {self.__discipline} как {self.__job_title}")

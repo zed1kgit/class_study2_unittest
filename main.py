@@ -32,6 +32,13 @@ class Teacher:
     def give_a_consultation(self, ed_class):
         return f"{self.__name} провел консультацию в классе {ed_class}"
 
+    def fire_teacher(self):
+        if self.__name in Teacher.teachers_dict.keys():
+            self.teachers_dict.pop(self.__name)
+            return f"Учитель {self.__name} был уволен!"
+        else:
+            return f"Учителя {self.__name} уже уволили!"
+
 
 class DisciplineTeacher(Teacher):
     def __init__(self, name, education, experience, discipline, job_title):

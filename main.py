@@ -1,8 +1,11 @@
 class Teacher:
+    teachers_dict = {}
+
     def __init__(self, name, education, experience):
         self.__name = name
         self.__education = education
         self.__experience = experience
+        Teacher.teachers_dict[self.__name] = [self.__education, self.__experience]
 
     def get_name(self):
         return self.__name

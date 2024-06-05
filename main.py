@@ -18,6 +18,7 @@ class Teacher:
 
     def set_experience(self, experience):
         self.__experience = experience
+        Teacher.teachers_dict[self.__name][1] = experience
         return True
 
     def get_teacher_data(self):
